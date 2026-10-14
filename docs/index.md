@@ -8,7 +8,7 @@
 把信息科技竞赛需要的核心知识与算法思想拆成 8 章，从认识比赛一路走到独立完成一道竞赛题。
 
 <div class="mt-tags">
-  <span class="mt-tag">适用学段：小学高年级 — 初中</span>
+  <span class="mt-tag">适用学段：初中为主 · 小学高年级可跟读前 3 章</span>
   <span class="mt-tag">建议课时：32 课时</span>
   <span class="mt-tag">语言：Python</span>
   <span class="mt-tag">关联：信息科技新课标 · 信息素养类白名单赛事</span>
@@ -22,7 +22,7 @@
 <div class="mt-stats">
   <div class="mt-stat"><span class="mt-stat-num">8</span><span class="mt-stat-label">章正文</span></div>
   <div class="mt-stat"><span class="mt-stat-num">17</span><span class="mt-stat-label">节知识点</span></div>
-  <div class="mt-stat"><span class="mt-stat-num">30+</span><span class="mt-stat-label">可运行代码示例</span></div>
+  <div class="mt-stat"><span class="mt-stat-num">76</span><span class="mt-stat-label">代码示例</span></div>
   <div class="mt-stat"><span class="mt-stat-num">24</span><span class="mt-stat-label">实践任务</span></div>
 </div>
 
@@ -30,10 +30,20 @@
 
 | 项目 | 说明 |
 |---|---|
-| **目标读者** | 小学高年级至初中学生，零基础或刚接触编程；也适合信息技术教师作为竞赛课教材或社团讲义 |
+| **目标读者** | 初中学生为主，零基础或刚接触编程；小学高年级学生可跟读第 1—3 章。也适合信息技术教师作为竞赛课教材或社团讲义 |
 | **前置知识** | 会使用电脑基本操作即可，**不需要**任何编程基础，不需要提前学数学竞赛内容 |
 | **学习方式** | 边读边敲代码。每节都有可以在本地或在线环境直接运行的完整程序，改一改、跑一跑，比只看更有效 |
 | **学完之后** | 能读懂竞赛题、能用 Python 写出正确解法、能自己调试错误、了解参赛与提交的基本流程 |
+
+!!! note "不同学段怎么用：难度是分层的"
+    | 章节 | 难度 | 适合谁 |
+    |---|---|---|
+    | 第 1—3 章 | 入门 | 小学高年级及以上，只要有基本的打字和文件操作能力 |
+    | 第 4—6 章 | 进阶 | 建议初中及以上。嵌套循环与递归需要一定的抽象思维能力 |
+    | 第 7—8 章 | 竞赛向 | 建议初中高年级及以上，或已完整学完前 6 章的学生 |
+
+    小学高年级的同学**先把前 3 章学扎实**（认识竞赛、计算思维、变量与输入输出），
+    这已经能覆盖新课标中信息科技的大部分基础要求；第 4 章之后再按自己的节奏推进，不要硬赶。
 
 !!! note "给零基础同学的提醒"
     看不懂是正常的，**跳过继续往后读也可以**。第 1—3 章是地基，慢一点没关系；
@@ -166,4 +176,5 @@
 <p class="mt-note-src">
 本教材为课程实验原创成果，参考了数字教材的通用组织方式（章节目录、正文分节、代码与讲解结合、章节小结与练习、前后跳转、响应式排版），
 内容、示例、名称与视觉均为独立设计，未复制任何现有教材的原文或品牌标识。
+<a href="about/">了解项目背景与版权说明 →</a>
 </p>

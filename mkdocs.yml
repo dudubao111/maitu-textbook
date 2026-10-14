@@ -47,6 +47,7 @@ extra_css:
 
 nav:
   - 首页: index.md
+  - 关于本项目: about.md
   - 第 1 章 走进信息科技竞赛:
       - 01-intro/index.md
       - 竞赛地图：都有哪些比赛: 01-intro/map.md
