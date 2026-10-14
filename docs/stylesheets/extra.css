@@ -1,0 +1,279 @@
+/* ============================================================
+   码途 · 中小学信息科技竞赛数字教材 — 自定义样式
+   目标：统一主色、字体层级、间距与卡片样式；不依赖远程字体与图片
+   ============================================================ */
+
+/* ---------- 1. 字体栈（不加载远程字体，保证离线/国内稳定） ---------- */
+:root {
+  --md-text-font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+    "Source Han Sans SC", "Noto Sans CJK SC", system-ui, -apple-system, sans-serif;
+  --md-code-font-family: "JetBrains Mono", "Cascadia Code", Consolas,
+    "Courier New", monospace;
+
+  /* 品牌辅助色 */
+  --mt-brand: #3f51b5;
+  --mt-brand-soft: #e8eaf6;
+  --mt-accent: #00acc1;
+  --mt-line: rgba(63, 81, 181, 0.16);
+  --mt-radius: 10px;
+}
+
+/* 深色模式下的品牌色微调 */
+[data-md-color-scheme="slate"] {
+  --mt-brand: #9fa8da;
+  --mt-brand-soft: rgba(159, 168, 218, 0.12);
+  --mt-accent: #4dd0e1;
+  --mt-line: rgba(159, 168, 218, 0.22);
+}
+
+/* ---------- 2. 阅读体验 ---------- */
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 0.9rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  border-bottom: 2px solid var(--mt-line);
+  padding-bottom: 0.3rem;
+  margin-top: 2.2rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  margin-top: 1.6rem;
+}
+
+/* 行内代码与代码块 */
+.md-typeset code {
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+}
+
+.md-typeset .highlight {
+  border-radius: var(--mt-radius);
+  overflow: hidden;
+}
+
+/* 表格：小屏可横向滚动，避免撑破布局 */
+.md-typeset__table {
+  width: 100%;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.74rem;
+  border-radius: var(--mt-radius);
+  overflow: hidden;
+}
+
+/* ---------- 3. 提示组件微调 ---------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--mt-radius);
+  font-size: 0.76rem;
+}
+
+/* ---------- 4. 首页：Hero 区 ---------- */
+.mt-hero {
+  margin: 0 0 2rem;
+  padding: 2.2rem 1.6rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #3f51b5 0%, #3949ab 45%, #00acc1 130%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(63, 81, 181, 0.25);
+}
+
+.mt-hero h1 {
+  color: #fff !important;
+  font-size: 1.7rem !important;
+  font-weight: 700;
+  margin: 0 0 0.5rem !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.mt-hero p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 0.82rem;
+  line-height: 1.75;
+  margin: 0.4rem 0;
+}
+
+.mt-hero .mt-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mt-hero .mt-tag {
+  display: inline-block;
+  padding: 0.18rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+/* ---------- 5. 首页：卡片网格 ---------- */
+.mt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.mt-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--mt-line);
+  border-left: 4px solid var(--mt-brand);
+  border-radius: var(--mt-radius);
+  background: var(--md-default-bg-color);
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.mt-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(63, 81, 181, 0.16);
+  border-left-color: var(--mt-accent);
+}
+
+.mt-card .mt-card-no {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--mt-accent);
+  margin-bottom: 0.35rem;
+}
+
+.mt-card .mt-card-title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.3rem;
+}
+
+.mt-card .mt-card-desc {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- 6. 首页：学习路径步骤条 ---------- */
+.mt-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 2rem;
+}
+
+.mt-step {
+  position: relative;
+  padding: 0.9rem 1rem;
+  border-radius: var(--mt-radius);
+  background: var(--mt-brand-soft);
+  border: 1px solid var(--mt-line);
+}
+
+.mt-step .mt-step-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--mt-brand);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.mt-step .mt-step-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.mt-step .mt-step-desc {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- 7. 统计条 ---------- */
+.mt-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0 1.6rem;
+  text-align: center;
+}
+
+.mt-stat {
+  padding: 0.9rem 0.5rem;
+  border: 1px solid var(--mt-line);
+  border-radius: var(--mt-radius);
+}
+
+.mt-stat .mt-stat-num {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--mt-brand);
+  line-height: 1.2;
+}
+
+.mt-stat .mt-stat-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.2rem;
+}
+
+/* ---------- 8. 小屏适配 ---------- */
+@media screen and (max-width: 44.9375em) {
+  .mt-hero {
+    padding: 1.6rem 1.1rem;
+    border-radius: 12px;
+  }
+
+  .mt-hero h1 {
+    font-size: 1.35rem !important;
+  }
+
+  .mt-grid,
+  .mt-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset {
+    font-size: 0.76rem;
+  }
+
+  /* 避免长代码/表格造成横向溢出 */
+  .md-typeset pre > code {
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+}
+
+/* ---------- 9. 页脚来源标注 ---------- */
+.mt-note-src {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}

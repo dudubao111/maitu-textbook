@@ -1,0 +1,124 @@
+site_name: 码途 · 中小学信息科技竞赛数字教材
+site_description: 面向中小学信息科技竞赛的 Python 算法与程序设计数字教材，含 8 章正文与配套练习。
+site_author: 王芮淳（岭南师范学院 · 教育技术学）
+docs_dir: docs
+site_dir: site
+copyright: 码途数字教材 · 原创内容，仅用于教学与实验用途
+
+theme:
+  name: material
+  language: zh
+  # 关闭 Google Fonts 远程字体，改用系统字体栈，保证国内/离线环境排版稳定
+  font: false
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 第 1 章 走进信息科技竞赛:
+      - 01-intro/index.md
+      - 竞赛地图：都有哪些比赛: 01-intro/map.md
+      - 学习路径与环境准备: 01-intro/setup.md
+  - 第 2 章 计算思维与问题分解:
+      - 02-thinking/index.md
+      - 计算思维的四个关键词: 02-thinking/concept.md
+      - 问题分解与抽象: 02-thinking/decompose.md
+  - 第 3 章 变量、数据类型与输入输出:
+      - 03-basics/index.md
+      - 变量与数据类型: 03-basics/variables.md
+      - 输入输出与类型转换: 03-basics/io.md
+  - 第 4 章 流程控制:
+      - 04-control/index.md
+      - 分支结构：让程序会选择: 04-control/branch.md
+      - 循环结构：让程序会重复: 04-control/loop.md
+  - 第 5 章 列表与字符串处理:
+      - 05-liststr/index.md
+      - 列表：批量管理数据: 05-liststr/list.md
+      - 字符串：文本的处理艺术: 05-liststr/string.md
+  - 第 6 章 函数与模块化:
+      - 06-func/index.md
+      - 函数：把代码打包: 06-func/define.md
+      - 递归：函数调用自己: 06-func/recursion.md
+  - 第 7 章 基础算法入门:
+      - 07-algo/index.md
+      - 枚举法：一个一个试: 07-algo/enum.md
+      - 查找与排序: 07-algo/search-sort.md
+      - 递推与贪心入门: 07-algo/recurrence.md
+  - 第 8 章 竞赛实战与提交规范:
+      - 08-practice/index.md
+      - 读题、建模与调试: 08-practice/debug.md
+      - 提交规范与实战流程: 08-practice/submit.md
+  - 附录:
+      - 术语表: appendix/glossary.md
+      - 常见问题: appendix/faq.md
+      - 练习参考答案: appendix/answers.md
+      - 拓展阅读: appendix/reading.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
